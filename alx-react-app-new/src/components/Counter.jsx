@@ -5,9 +5,10 @@ function Counter(){
     return(
         <div>
             <p>Current Count: {count}</p>
-            <button onClick={()=>setCount(count ++)}>Increment</button>
-            <button onClick={()=>setCount(count --)}>Decrement</button>
+            <button onClick={()=>setCount(count + 1)}>Increment</button>
+            <button onClick={()=>setCount(count - 1)}>Decrement</button>
             <button onClick={()=>setCount(0)}>Reset</button>
         </div>
     );
 }
+export default Counter;
