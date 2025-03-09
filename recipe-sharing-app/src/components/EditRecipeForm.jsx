@@ -10,7 +10,7 @@ const EditRecipeForm = () => {
     updateRecipe: state.updateRecipe,
   }));
 
-  const recipe = recipes.find(recipe => recipe.id.toString() === id);
+  const recipe = recipes.find(recipe => recipe.id === parseInt(id));
   const [title, setTitle] = useState(recipe?.title || '');
   const [description, setDescription] = useState(recipe?.description || '');
 
