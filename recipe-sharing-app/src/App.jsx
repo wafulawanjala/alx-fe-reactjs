@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import RecipeDetails from './components/RecipeDetails';
 import EditRecipeForm from './components/EditRecipeForm';
 import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/recipes/:id" element={<RecipeDetails />} />
           <Route path="/edit-recipe/:id" element={<EditRecipeForm />} />
           <Route path="/favorites" element={<FavoritesList />} />
+          <Route path="/recommendations" element={<RecommendationsList />} />
         </Routes>
       </div>
     </Router>
