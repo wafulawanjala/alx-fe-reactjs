@@ -1,5 +1,5 @@
-import { useParams } from 'react-router-dom';
 import useRecipeStore from './recipeStore';
+import DeleteRecipeButton from './DeleteRecipeButton';
 
 const RecipeDetails = () => {
   const { id } = useParams();
@@ -13,6 +13,8 @@ const RecipeDetails = () => {
     <div>
       <h1>{recipe.title}</h1>
       <p>{recipe.description}</p>
+      <Link to={`/edit-recipe/${id}`}>Edit Recipe</Link>
+      <DeleteRecipeButton recipeId={id} />
     </div>
   );
 };
