@@ -10,14 +10,14 @@ const EditRecipeForm = () => {
     updateRecipe: state.updateRecipe,
   }));
 
-  const recipe = recipes.find(r => r.id.toString() === id);
+  const recipe = recipes.find(recipe => recipe.id.toString() === id);
   const [title, setTitle] = useState(recipe?.title || '');
   const [description, setDescription] = useState(recipe?.description || '');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateRecipe(id, { title, description });
-    navigate(`/recipes/${id}`);
+    updateRecipe(recipe.id, { title, description });
+    navigate(`/recipes/${recipe.id}`);
   };
 
   return (
